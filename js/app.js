@@ -14,6 +14,12 @@ var currentState=0;
 			var nextLeague=nextPage.attr('id')
 			var currCrest=$('#'+currLeague+'-crest');
 			var nextCrest=$('#'+nextLeague+'-crest');
+            $('#page-info-parent').fadeIn(400);
+            $('#'+currLeague+'-info').fadeOut(400)
+            
+            setTimeout(function(){
+                $('#'+nextLeague+'-info').fadeIn(400)
+            },400)
 
 			$('.team-page').removeClass('offstage-right').addClass('offstage-left')
 			$('#crests-parent div').removeClass('offstage-right').addClass('offstage-left')
@@ -33,6 +39,12 @@ var currentState=0;
 			var nextLeague=nextPage.attr('id')
 			var currCrest=$('#'+currLeague+'-crest');
 			var nextCrest=$('#'+nextLeague+'-crest');
+            $('#page-info-parent').fadeIn(400);
+            $('#'+currLeague+'-info').fadeOut(400)
+
+            setTimeout(function(){
+                $('#'+nextLeague+'-info').fadeIn(400)
+            },400)
 
 			currentPage.removeClass('active').addClass('offstage-right')
 			nextPage.removeClass('offstage-left').addClass('active')
@@ -41,6 +53,9 @@ var currentState=0;
 			nextCrest.removeClass('offstage-left').addClass('active')
 			var widthToTranslate=$('#title-page-background').width()+getTeamBackgroundLeftovers();
 			if(currentState == 0){
+                $('#page-info-parent').fadeOut(400);
+                $('.page-info').fadeOut(400)
+                
 				$('#background-images').css('transform','translateX(0px)')
 			}else{
 				$('#background-images').css('transform','translateX(-'+widthToTranslate+'px)')
@@ -57,6 +72,8 @@ var currentState=0;
 			var currLeague=currentPage.attr('id')
 			var nextLeague=nextPage.attr('id')
 			var currCrest=$('#'+currLeague+'-crest');
+            $('#page-info-parent').fadeOut(400);
+            $('.page-info').fadeOut(400)
 
 			currentPage.removeClass('active')
 			currCrest.removeClass('active')
@@ -71,7 +88,12 @@ var currentState=0;
 			var nextLeague=nextPage.attr('id')
 			var currCrest=$('#'+currLeague+'-crest');
 			var nextCrest=$('#'+nextLeague+'-crest');
+            $('#page-info-parent').fadeIn(400);
+            $('#'+currLeague+'-info').fadeOut(400)
 
+            setTimeout(function(){
+                $('#'+nextLeague+'-info').fadeIn(400)
+            },400)
 			currentPage.removeClass('active')
 			currCrest.removeClass('active')
 
